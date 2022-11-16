@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> String operations </title>
+</head>
+<body>
+
+<input type = "text" id ="string" />
+<br>
+Enter a new Character to be replaced:
+<input type = "text" id = "char1" />
+Enter new Character:
+<input type = "text" id = "char2"/>
+
+<input type = "button" value = "Reverse String" onclick = "StrReverse()"/>
+<input type = "button" value = "Replace characters of String" onclick = "ReplaceChar()"/>
+<input type = "button" value = "Check Palindrome" onclick= "Palindrome()"/> 
+
+<script>
+
+function StrReverse(){
+var string = document.getElementById("string").value;
+
+document.write(string.split("").reverse().join(""));
+
+}
+
+
+function ReplaceChar(){
+var string = document.getElementById("string").value;
+var r1 = document.getElementById("char1").value;
+var r2 = document.getElementById("char2").value;
+var r3 = string.replaceAll(r1,r2);
+document.write(r3);
+}
+
+function Palindrome(){
+var string = document.getElementById("string").value;
+var revString = string.split("").reverse().join("");
+var fString = string.localeCompare(revString);
+if(fString == 0) document.write("String is a palindrome");
+else{ document.write("String is not a palindrome")}
+}
+</script>
+</body>
+</html>

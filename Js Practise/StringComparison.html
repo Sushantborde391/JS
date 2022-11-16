@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> Comparison OF Strings </title>
+</head>
+<body>
+Enter First String:
+<input type = "text" id = "s1" />
+Enter Second String:
+<input type = "text" id = "s2" />
+
+Select method to compare Strings:
+
+<input type = "button" value = "localeCompare()" onclick="LocaleCom()"/>
+
+<input type = "button" value = "Equality Operator" onclick = "equality()"/>
+
+<script>
+
+function LocaleCom(){
+var a = document.getElementById("s1").value;
+var b = document.getElementById("s2").value;
+var c = a.loacaleCompare(b);
+document.write(c);
+}
+
+function equality(){
+var a = document.getElementById("s1").value;
+var b = document.getElementById("s2").value;
+if(a === b){
+alert("strings are equal");
+}
+else{
+alert("Strings are not equal");
+}
+}
+
+</script>
+</body>
+</html>
+
